@@ -2,29 +2,23 @@ export abstract class CardUtils {
 
     static validate(cardNumber: string): boolean {
 
-        const verificationDigit = parseInt(cardNumber.slice(-1));
+        let sum = 0;
+        const length = cardNumber.length;
 
-        const cardNumberWithoutLastDigit = cardNumber.slice(0, -1);
+        for (let i = length - 2, isEven = true; i >= 0; i--, isEven = !isEven) {
+            let digit = parseInt(cardNumber[i]);
 
-        const reverse = cardNumberWithoutLastDigit.split('').reverse().join('');
+            if (isEven) {
+                digit *= 2;
+                if (digit > 9) digit -= 9;
+            }
 
-        const oddDigits = reverse.split('')
-            .filter((_, index) => index % 2 === 1)
-            .map(digit => {
+            sum += digit;
+        }
 
-                let res = parseInt(digit) * 2;
+        const verificationDigit = parseInt(cardNumber[length - 1]);
 
-                if (res > 9)
-                    res -= 9;
-
-                return res;
-            });
-
-        const sum = oddDigits.reduce((acc, digit) => acc + digit, 0);
-
-        const valid = (sum + verificationDigit) % 10 === 0;
-
-        return valid;
+        return (sum + verificationDigit) % 10 === 0;
     }
 
 }
