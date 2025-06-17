@@ -1,1 +1,1 @@
-export { CardUtils } from './src/card.utils';
+export * from './src/card.utils';
