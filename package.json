@@ -1,0 +1,15 @@
+{
+  "name": "card-utils",
+  "version": "1.0.0",
+  "author": "Gabriel Seima",
+  "license": "ISC",
+  "main": "index.ts",
+  "type": "module",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
