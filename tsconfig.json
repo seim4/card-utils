@@ -8,6 +8,8 @@
         "outDir": "build",
         "rootDir": "src",
         "skipLibCheck": true,
-        "strict": true
+        "strict": true,
+        "declaration": true,
+        "declarationMap": true
     }
 }

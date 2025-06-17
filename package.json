@@ -1,11 +1,12 @@
 {
   "name": "@seima/card-utils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Gabriel Seima",
   "license": "ISC",
   "private": false,
   "main": "build/index.js",
   "type": "module",
+  "types": "build/index.d.ts",
   "scripts": {
     "build": "npx tsc"
   },
