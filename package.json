@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "Gabriel Seima",
   "license": "ISC",
+  "private": false,
   "main": "index.ts",
   "type": "module",
   "types": "index.d.ts",
