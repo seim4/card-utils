@@ -1,9 +1,10 @@
 {
     "exclude": ["node_modules", "build"],
     "compilerOptions": {
-        "lib": ["ESNext"],
-        "module": "esnext",
-        "target": "esnext",
+        "lib": ["es2020"],
+        "target": "es2015",
+        "module": "es2020",
+        "moduleResolution": "node",
         "moduleDetection": "force",
         "outDir": "build",
         "rootDir": "src",
