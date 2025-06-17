@@ -1,1 +1,1 @@
-export * from './src/card.utils';
+export { CardUtils } from './src/card.utils.ts';
