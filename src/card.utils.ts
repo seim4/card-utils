@@ -2,6 +2,11 @@ export abstract class CardUtils {
 
     static validate(cardNumber: string): boolean {
 
+        if (!cardNumber || typeof cardNumber !== 'string' || cardNumber == undefined)
+            return false;
+        
+        cardNumber = cardNumber.trim().replace(/\s+/g, '');
+
         let sum = 0;
         const length = cardNumber.length;
 
